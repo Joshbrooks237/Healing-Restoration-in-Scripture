@@ -13,7 +13,7 @@ interface Dove {
 
 export function FloatingDoves() {
   const [doves, setDoves] = useState<Dove[]>([]);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     // Create doves with dynamic movement properties
